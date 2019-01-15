@@ -1,6 +1,10 @@
 # coding-test
 Coding Test Sample
 
+Author: John Hackett
+Github: https://github.com/hackjob83
+Last update: 01/15/2019
+
 Simple form with Bootstrap front-end.
 
 Custom Javascript file for specific functions 
