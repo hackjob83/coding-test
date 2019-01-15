@@ -1,0 +1,81 @@
+/**
+*******************************************************************************
+Author: John Hackett
+Description: Styling for Synergy Marketing Partners code test
+*******************************************************************************
+**/
+
+/** Nissan font import **/
+@font-face {
+  font-family: 'NissanBrandW01';
+  src: url('../fonts/NissanBrandW01-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/NissanBrandW01-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/NissanBrandW01-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/NissanBrandW01-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/NissanBrandW01-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/NissanBrandW01-Regular.svg#NissanBrandW01-Regular') format('svg'); /* Legacy iOS */
+}
+
+/** general styling for page/body **/
+htnl, body { background-color: #fff; color: #1f2125; font-family: 'NissanBrandW01'; font-size: 14px; }
+
+/** generic classes **/
+.gray { color:#616a72; }
+.red { background-color: #c6132d; color: white; }
+.right { text-align: right; }
+.hidden { display: none; }
+.padded { padding-left: 20px; margin-bottom: 0px; }
+
+/** custom error coloring for parsley **/
+p.parsley-error, .parsley-error { background-color: #ef8b89; border: 2px solid red !important; }
+
+/** tweak for bootstrap margins that throw off some rows **/
+.reverse-margin { margin-left: 0px; margin-right: 0px; }
+.reverse-padding { padding-left: 0px; padding-right: 0px; }
+.spec-left { padding-right: 5px; }
+.spec-right { padding-left: 5px; }
+
+/** nissan titlt content styling **/
+.nissan-title { padding-top: 15px; }
+
+/** special styling for shaded boxes and rules box **/
+.q-box { background-color: #f7f8f9; border: 1px solid #d8d9da; padding: 20px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; height: 100%; }
+.rules-box { border: 1px solid #d8d9da; font-size: 10px; padding: 10px; height: 270px; overflow: auto; }
+
+/** horizontal radio box w vertical labeling tweaks **/
+.radio-label-vertical-wrapper {  padding-bottom: 13px;  position: relative;  display: inline-block; }
+.radio-label-vertical-wrapper:before {  content: ' ';  display: block;  width: 100%;  height: 30px;  position: absolute;  bottom: 0; }
+.radio-label-vertical-wrapper label:not(.radio-label-vertical) {  display: block;  width: 100%; }
+.radio-label-vertical {  position: relative;  display: inline-block;  vertical-align: middle;  padding: 0 5px;  text-align: center; }
+.radio-label-vertical input {  position: absolute;  top: 28px;  left: 50%;  margin-left: -6px;  display: block;  cursor: pointer; }
+.radio-label-vertical-wrapper small { position: relative;  top: 18px; }
+
+/** signature box styling **/
+.signature-pad {  position: relative;  display: -webkit-box;  display: -ms-flexbox;  display: flex;  -webkit-box-orient: vertical;  -webkit-box-direction: normal;   -ms-flex-direction: column;
+          flex-direction: column;  font-size: 10px;  width: 100%;  height: 150px;  border: 1px solid #d8d9da;  background-color: #fff;  border-radius: 3px; }
+.signature-pad::before, .signature-pad::after {  position: absolute;  z-index: -1;  content: "";  width: 40%;  height: 10px;  bottom: 10px;  background: transparent; }
+.signature-pad::before {  left: 20px;  -webkit-transform: skew(-3deg) rotate(-3deg);   transform: skew(-3deg) rotate(-3deg); }
+.signature-pad::after {  right: 20px;  -webkit-transform: skew(3deg) rotate(3deg);  transform: skew(3deg) rotate(3deg); }
+.signature-pad--body {  position: relative;  -webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  border: 1px solid #f4f4f4; }
+.signature-pad--body canvas {  position: absolute;  left: 0;  top: 0;  width: 100%;  height: 100%;  border-radius: 3px; }
+
+
+/** top and bottom margins for hero image **/
+#hero-img { margin: 15px 0px 30px 0px; }
+
+/** styling for signed on date text **/
+#signed_date { font-weight: bold; }
+
+/** custom media queries **/
+/** tweak heading sizes for smaller screens to keep leyout the same **/
+@media only screen and (max-width: 768px) {
+  h2 { font-size: 1.5rem; }
+  h4 { font-size: 1rem; }
+  .spec-left { padding-right: 15px; }
+  .spec-right { padding-left: 15px; }
+  .reverse-padding.spec-left, .reverse-padding.spec-right { padding-left: 0px !important; padding-right: 0px !important; }
+}
+
+@media only screen and (max-width: 535px) {
+  h2 { font-size: 1.2rem; }
+}
